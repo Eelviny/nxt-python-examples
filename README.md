@@ -1,4 +1,4 @@
-# ![Logo](https://raw.githubusercontent.com/Eelviny/nxt-python/master/logo.png) nxt-python-examples
+# ![Logo](https://cdn.rawgit.com/Eelviny/nxt-python/master/logo.svg) nxt-python-examples
 A set of scripts used by NXT-Python. Use this to get an idea of how to program for it.
 See the main repository [here](https://github.com/Eelviny/nxt-python/).
 
