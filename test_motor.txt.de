@@ -1,0 +1,8 @@
+test_motor.py
+=============
+
+Fragt den Benutzer, welcher Ausgangs-Port verwendet
+werden soll. Wenn an dem gewählten Port ein Motor
+angeschlossen ist, dann wird dieser mit maximaler
+Geschwindigkeit um 360 Grad erst vorwärts und
+dann rückwärts gedreht.
