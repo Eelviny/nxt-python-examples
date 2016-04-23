@@ -1,0 +1,7 @@
+clapper1.py
+===========
+
+Dieses Script lauscht auf den Geräusch-Sensor,
+der auf Port 1 angeschlossen werden muss. Sobald das
+Geräuschlevel eine vorgegebene Schwelle überschritten
+hat, wird eine Nachricht auf der Konsole ausgegeben.
