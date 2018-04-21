@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Converted from mary.rb found in ruby_nxt package
 # Plays "Mary Had A Little Lamb"

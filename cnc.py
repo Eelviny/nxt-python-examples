@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #Script to control a NXT 2-axis CNC "Pancake maker"
 #Illustrates controlling more than one motor at the same time without trying to
 #sync them. Uses the thread module.
