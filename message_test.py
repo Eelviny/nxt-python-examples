@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 #During this test you need to run any program on the brick
 #which doesn't use the messaging system. Most programs fit

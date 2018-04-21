@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
+
 r'''Alpha Rex API
 
     A high-level, object-oriented programming interface to Lego MINDSTORMS
     NXT's "Alpha Rex" model (see [1] for assembling instructions), along with a
     small collection of functions demonstrating obvious usage scenarios.
-    
+
     1. http://www.active-robots.com/products/mindstorms4schools/building-instructions.shtml
 '''
 
@@ -22,7 +24,7 @@ BACK = -100
 
 class AlphaRex(object):
     r'''A high-level controller for the Alpha Rex model.
-    
+
         This class implements methods for the most obvious actions performable
         by Alpha Rex, such as walk, wave its arms, and retrieve sensor samples.
         Additionally, it also allows direct access to the robot's components
@@ -30,14 +32,14 @@ class AlphaRex(object):
     '''
     def __init__(self, brick='NXT'):
         r'''Creates a new Alpha Rex controller.
-        
+
             brick
                 Either an nxt.brick.Brick object, or an NXT brick's name as a
                 string. If omitted, a Brick named 'NXT' is looked up.
         '''
         if isinstance(brick, str):
             brick = find_one_brick(name=brick)
-    
+
         self.brick = brick
         self.arms = Motor(brick, PORT_A)
         self.legs = [Motor(brick, PORT_B), Motor(brick, PORT_C)]
@@ -51,7 +53,7 @@ class AlphaRex(object):
         r'''Reads the Ultrasonic sensor's output.
         '''
         return self.ultrasonic.get_sample()
-    
+
     def feel(self):
         r'''Reads the Touch sensor's output.
         '''
@@ -84,10 +86,10 @@ class AlphaRex(object):
 
     def walk(self, secs, power=FORTH):
         r'''Simultaneously activates the leg motors, causing Alpha Rex to walk.
-        
+
             secs
                 How long the motors will rotate.
-            
+
             power
                 The strength effected by the motors. Positive values will cause
                 Alpha Rex to walk forward, while negative values will cause it
@@ -97,7 +99,7 @@ class AlphaRex(object):
         '''
         for motor in self.legs:
             motor.run(power=power)
-        
+
         sleep(secs)
 
         for motor in self.legs:
@@ -105,10 +107,10 @@ class AlphaRex(object):
 
     def wave(self, secs, power=100):
         r'''Make Alpha Rex move its arms.
-        
+
             secs
                 How long the arms' motor will rotate.
-            
+
             power
                 The strength effected by the motor. If omitted, (100) is used.
         '''
